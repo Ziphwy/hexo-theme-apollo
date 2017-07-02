@@ -1,6 +1,8 @@
+$main-color: #2196F3;
+
 ::selection {
     color: #FFFFFF;
-    background-color: #42b983;
+    background-color: $main-color;
 }
 
 html, body {
@@ -15,6 +17,7 @@ body {
     line-height: 1.6;
     background-color: #fff;
     font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgba(193, 199, 206, 0.2);
 }
 
 ul.nav,
@@ -36,7 +39,7 @@ a, a:active {
 a.nav-list-link.active,
 a.nav-list-link:hover,
 a.post-title-link:hover {
-    border-bottom: 2px solid #42b983;
+    border-bottom: 2px solid $main-color;
 }
 
 hr {

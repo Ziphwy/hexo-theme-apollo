@@ -3,6 +3,14 @@
 }
 
 .post-block {
+    .title-wrap {
+        overflow: hidden;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-indent: 1em;
+        padding: 1em;
+        margin-bottom: 3em;
+    }
     .post-title {
         margin: 0.65em 0;
         color: #2c3e50;
@@ -27,12 +35,18 @@
 }
 
 .post-content {
+    h1 {
+        border-bottom: 1px solid #ddd;
+    }
+    h2, h3 {
+        text-indent: 0.5em;
+    }
     h2, h3, h4, h5, h6 {
         position: relative;
         margin: 1em 0;
         a:before {
-            content: "#";
-            color: #42b983;
+            content: "-";
+            color: $main-color;
             position: absolute;
             left: -0.7em;
             top: -4px;
@@ -41,6 +55,7 @@
         }
     }
     h4, h5, h6 {
+        // text-indent: 0.5em;        
         a:before {
             content: "";
         }
@@ -54,51 +69,58 @@
         font-size: 18px;
     }
     a {
-        color: #42b983;
+        color: $main-color;
         word-break: break-all;
     }
     blockquote {
         margin: 2em 0;
         padding-left: 20px;
-        border-left: 4px solid #42b983;
+        border-left: 4px solid $main-color;
+        background: #f8f8f8;
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.125);
+    }
+    blockquote p {
+        padding: 10px 0;
     }
     img {
         display: block;
-        max-width: 100%;
-        margin: 1em auto;
+        max-width: 90%;
+        margin: 2em auto;
+        box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.6);
     }
     & > table,
     & > figure.highlight {
-        box-shadow: 0 1px 2px rgba(0,0,0,0.125);
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.125);
     }
     .tip {
         position: relative;
         margin: 2em 0;
-        padding: 12px 24px 12px 30px;
+        padding: 10px 20px;
         border-left: 4px solid #f66;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
         background-color: #f8f8f8;
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.125);
         br {
             display: none;
         }
     }
-    .tip:before {
-        position: absolute;
-        top: 14px;
-        left: -12px;
-        content: "!";
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        color: #fff;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: bold;
-        text-align: center;
-        background-color: #f66;
-        font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
-    }
+    // .tip:before {
+    //     position: absolute;
+    //     top: 14px;
+    //     left: -12px;
+    //     content: "!";
+    //     width: 20px;
+    //     height: 20px;
+    //     border-radius: 100%;
+    //     color: #fff;
+    //     font-size: 14px;
+    //     line-height: 20px;
+    //     font-weight: bold;
+    //     text-align: center;
+    //     background-color: #f66;
+    //     font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    // }
 }
 
 #mask {
@@ -123,7 +145,7 @@ pre {
 
 .highlight {
     position: relative;
-    margin: 1em 0;
+    margin: 2em 0;
     border-radius: 2px;
     line-height: 1.1em;
     background-color: #f8f8f8;
@@ -206,7 +228,7 @@ pre {
     .symbol .string,
     .value,
     .regexp {
-        color: #42b983;
+        color: $main-color;
     }
     .title {
         color: #83B917;
@@ -235,7 +257,7 @@ pre {
     .apache .cbracket,
     .tex .command,
     .prompt {
-        color: #42b983;
+        color: $main-color;
     }
     .comment,
     .java .annotation,
