@@ -1,0 +1,10 @@
+extends partial/layout
+
+block container
+  if page.type === "tags"
+    .test
+      //- != list_tags()
+      != tagcloud({ min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'gray', end_color: 'black'})
+
+block copyright
+  include partial/copyright

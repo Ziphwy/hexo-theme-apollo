@@ -4,6 +4,14 @@ mixin postInfo(item)
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from target="_blank" title=item.from) 翻译 · 原文地址
 
+mixin postTag(item)
+    .post-tags
+        if page.tags
+            - page.tags.each(function(tag) {
+                .post-tag
+                    != tag.name
+            - })
+
 //- Index Page
 mixin posts()
     ul.home.post-list
@@ -44,5 +52,6 @@ mixin post(item)
                 h1.post-title
                     != item.title
                 +postInfo(item)
+                +postTag(item)
             .post-content
                 != item.content
