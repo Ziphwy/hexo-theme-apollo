@@ -23,8 +23,9 @@ mixin posts()
                             != item.title
                     +postInfo(item)
                     .post-content
-                        != item.excerpt
-                    a.read-more(href= url_for(item.path))!= __('more')
+                        != item.excerpt 
+                        a.read-more(href= url_for(item.path))
+                            != __('more')
         - })
 
 //- Archive Page

@@ -8,6 +8,12 @@
         }
     }
     .post-content{
+        background: #fdfdfd;
+        padding: 1em;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.125);
+        
         h2, h3, h4, h5, h6 {
             &:before {
                 content: '';
